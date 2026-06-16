@@ -1,8 +1,8 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-36 pb-20">
 
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div class="space-y-8 animate-slideInLeft text-center lg:text-left" v-show="true">
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Right Content - Avatar/Image -->
-        <div class="relative h-96 lg:h-auto lg:self-start lg:-mt-24 flex items-center justify-center animate-fadeInUp" style="animation-delay: 0.2s">
+        <div class="relative h-96 lg:h-auto lg:self-center flex items-center justify-center animate-fadeInUp" style="animation-delay: 0.2s">
           <GithubGlobe :globe-config="globeConfig" :data="sampleArcs" />
 
           <!-- Floating Badge: AI/ML — top-left -->

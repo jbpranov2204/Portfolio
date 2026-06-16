@@ -56,13 +56,13 @@
           </div>
 
           <!-- Additional Info -->
-          <div class="glass rounded-2xl p-6 border-l-4 border-purple-400 hover:bg-white/20 transition-all duration-300 transform hover:translate-x-2 text-left">
-            <h4 class="text-xl font-bold text-purple-400 mb-4">Core Expertise</h4>
+          <div class="glass rounded-2xl p-6 border-l-4 border-cyan-400 hover:bg-white/20 transition-all duration-300 transform hover:translate-x-2 text-left">
+            <h4 class="text-xl font-bold text-cyan-400 mb-4">Core Expertise</h4>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-400 text-sm">
               <li>✦ 🤖 Agentic AI</li>
               <li>✦ 🧠 Generative AI & RAG</li>
               <li>✦ ☁️ Oracle Cloud Infrastructure</li>
-              <li>✦ 📱 Flutter Development</li>
+              <li>✦ 📱 Full Stack Development</li>
               <li>✦ 📊 Machine Learning</li>
               <li>✦ 🔗 API Integration</li>
             </ul>

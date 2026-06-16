@@ -41,20 +41,8 @@
             </div>
           </div>
 
-          <!-- Progress Bar (visual indicator) -->
-          <div class="mt-6 pt-6 border-t border-white/10">
-            <div class="flex items-center justify-between text-xs text-gray-400 mb-2">
-              <span>Proficiency</span>
-              <span>{{ Math.floor(Math.random() * 30 + 70) }}%</span>
-            </div>
-            <div class="w-full h-2 glass rounded-full overflow-hidden">
-              <div
-                class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-                :style="{ width: Math.floor(Math.random() * 30 + 70) + '%' }"
-              ></div>
-            </div>
-          </div>
         </div>
+
       </div>
 
 
