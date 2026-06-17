@@ -4,8 +4,8 @@ export const portfolioData = {
   description: 'Detail-oriented AI Engineer building LLM-driven solutions, multi-agent systems, and practical ML workflows with a strong focus on real-world impact.',
 
   social: [
-    { name: 'GitHub', url: 'https://github.com', icon: 'github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
+    { name: 'GitHub', url: 'https://github.com/jbpranov2204', icon: 'github' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/jbpranov/', icon: 'linkedin' },
   ],
 
   about: {
@@ -173,7 +173,7 @@ export const portfolioData = {
     },
     {
       type: 'internship',
-      title: 'Developer Intern',
+      title: ' AI Developer Intern',
       company: 'Astutech Solutions India Pvt Ltd',
       year: 'Aug 2025 - Dec 2025',
       description: 'Contributed to foundational technical development and system integrations, gaining deep expertise in the tech stack before transitioning to a full-time role.',
@@ -196,9 +196,10 @@ export const scrollToSection = (sectionId) => {
 }
 
 export const downloadResume = () => {
-  // Create a sample resume download
   const link = document.createElement('a')
-  link.href = '#'
+  link.href = '/Pranov_JB_Resume.pdf'
   link.download = 'Pranov_JB_Resume.pdf'
+  document.body.appendChild(link)
   link.click()
+  document.body.removeChild(link)
 }
