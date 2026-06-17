@@ -7,9 +7,9 @@
         <!-- Left Content -->
         <div class="space-y-8 animate-slideInLeft text-center lg:text-left" v-show="true">
           <div class="space-y-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              Hi, I'm
-              <span class="gradient-text-light"> {{ name }}</span>
+            <h1 class="font-bold leading-tight">
+              <span class="block text-xl sm:text-2xl md:text-3xl font-medium text-gray-300 mb-2">Hi, I'm</span>
+              <span class="text-3xl sm:text-4xl md:text-5xl gradient-text-light">{{ name }}</span>
             </h1>
             
             <div class="h-16 flex items-center justify-center lg:justify-start">

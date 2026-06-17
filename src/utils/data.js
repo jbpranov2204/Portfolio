@@ -15,7 +15,7 @@ export const portfolioData = {
       {
         school: 'Meenakshi Sundararajan Engineering College',
         degree: 'B.Tech in Artificial Intelligence and Data Science',
-        year: '11/2022 - 06/2026',
+        year: 'Nov 2022 - May 2026',
         details: 'Chennai, India',
       },
     ],

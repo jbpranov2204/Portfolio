@@ -5,7 +5,7 @@
       <!-- Section Header -->
       <div class="text-center mb-20" v-if="isVisible">
         <p class="text-cyan-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3 animate-fadeInUp">Career</p>
-        <h2 class="text-3xl md:text-5xl font-bold mb-4 animate-fadeInUp" style="animation-delay: 0.05s">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-fadeInUp" style="animation-delay: 0.05s">
           <span class="gradient-text">Professional Experience</span>
         </h2>
         <p class="text-gray-400 text-lg max-w-xl mx-auto animate-fadeInUp" style="animation-delay: 0.1s">
