@@ -1,7 +1,7 @@
 export const portfolioData = {
   name: 'Pranov J B',
   title: 'AI Developer | Agentic AI Builder | App Developer | ML & Data Science',
-  description: 'Detail-oriented AI Engineer building LLM-driven solutions, multi-agent systems, and practical ML workflows with a strong focus on real-world impact.',
+  description: 'Building AI that works, agents that collaborate, and applications that people actually enjoy using. I specialize in LLM-powered solutions, multi-agent systems, and machine learning workflows, turning ambitious ideas into real-world products—one bug fix at a time.',
 
   social: [
     { name: 'GitHub', url: 'https://github.com/jbpranov2204', icon: 'github' },

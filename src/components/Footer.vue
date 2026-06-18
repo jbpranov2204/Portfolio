@@ -50,7 +50,7 @@
         </div>
 
         <!-- Social -->
-        <div>
+        <div class="flex flex-col items-center">
           <h4 class="font-bold mb-4 text-white">Connect</h4>
           <div class="flex gap-4">
             <a

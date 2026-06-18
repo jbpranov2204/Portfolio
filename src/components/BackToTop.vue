@@ -8,10 +8,12 @@
     <button
       v-if="showButton"
       @click="scrollToTop"
-      class="fixed bottom-8 right-8 z-40 w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/20 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-110"
+      class="fixed bottom-8 right-8 z-40 w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/20 hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-110 group"
       title="Back to Top"
     >
-      <span class="text-xl animate-bounce">↑</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-300 group-hover:text-cyan-400 group-hover:-translate-y-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+      </svg>
     </button>
   </transition>
 </template>
