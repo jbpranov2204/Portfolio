@@ -176,7 +176,7 @@ export const portfolioData = {
       title: ' AI Developer Intern',
       company: 'Astutech Solutions India Pvt Ltd',
       year: 'Aug 2025 - Dec 2025',
-      description: 'Contributed to foundational technical development and system integrations, gaining deep expertise in the tech stack before transitioning to a full-time role.',
+      description: 'Built a hybrid AI system for supply chain risk detection by combining LLM-based data labeling, semantic embeddings, and traditional machine learning on real-time news headlines.',
     },
   ],
 

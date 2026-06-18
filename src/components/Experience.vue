@@ -138,7 +138,7 @@ const experienceItems = ref([
       'Deployed scalable OCI Functions for real-time inference execution',
       'Integrated API Gateways and cloud security best practices',
     ],
-    tech: ['Python', 'OCI', 'Machine Learning', 'AIOps', 'Serverless'],
+    tech: ['Python', 'OCI', 'Machine Learning', 'AIOps'],
   },
   {
     type: 'internship',
@@ -148,11 +148,11 @@ const experienceItems = ref([
     description: portfolioData.experience[1].description,
     current: false,
     highlights: [
-      'Contributed to core technical development and system integrations',
-      'Gained deep expertise in the cloud-native tech stack',
-      'Transitioned to full-time role based on performance',
+      'Used SentenceTransformer embeddings for similarity-based headline matching',
+      'Applied LLM-based severity scoring to enrich the training dataset',
+      'Trained an ExtraTreesClassifier on TF-IDF and metadata features for prediction'
     ],
-    tech: ['Python', 'Cloud', 'REST APIs', 'System Integration'],
+    tech: ['Python', 'LLMs', 'SentenceTransformers', 'Machine Learning', 'Flask'],
   },
 ])
 

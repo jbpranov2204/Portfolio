@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="py-20 relative">
+  <section id="projects" class="py-20 relative" ref="sectionRef">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16 animate-slideUp" v-if="isVisible">

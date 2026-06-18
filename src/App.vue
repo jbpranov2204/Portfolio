@@ -34,14 +34,17 @@
       <!-- Skills Section -->
       <Skills />
 
-      <!-- Projects Section -->
-      <Projects />
+      <!-- Projects Section (Removed to fix gap and duplication) -->
+      <!-- <Projects /> -->
 
       <!-- My Projects Section -->
       <MyProjects />
 
       <!-- Experience Section -->
       <Experience />
+
+      <!-- Achievements & Leadership Section -->
+      <Achievements />
 
       <!-- Contact Section -->
       <Contact />
@@ -66,6 +69,7 @@ import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
 import MyProjects from './components/MyProjects.vue'
 import Experience from './components/Experience.vue'
+import Achievements from './components/Achievements.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import BackToTop from './components/BackToTop.vue'
