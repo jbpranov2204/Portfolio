@@ -2,7 +2,7 @@
   <section id="projects" class="py-20 relative" ref="sectionRef">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="text-center mb-16 animate-slideUp" v-if="isVisible">
+      <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           <span class="gradient-text">Featured Projects</span>
         </h2>
@@ -12,7 +12,7 @@
       </div>
 
       <!-- Filter Buttons -->
-      <div class="flex flex-wrap gap-3 justify-center mb-12 animate-fadeInUp" v-if="isVisible" style="animation-delay: 0.1s">
+      <div class="flex flex-wrap gap-3 justify-center mb-12">
         <button
           @click="selectedFilter = 'all'"
           :class="[
@@ -38,12 +38,12 @@
       </div>
 
       <!-- Projects Grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" v-if="isVisible">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <transition-group name="fade" tag="div" class="contents">
           <div
             v-for="(project, index) in filteredProjects"
             :key="project.id"
-            class="p-1 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-fadeInUp"
+            class="p-1 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"
             :style="{ animationDelay: `${index * 0.08}s` }"
           >
             <FlipCard :project="project" />
@@ -52,7 +52,7 @@
       </div>
 
       <!-- View All Projects Button -->
-      <div class="text-center mt-16" v-if="isVisible">
+      <div class="text-center mt-16">
         <a
           href="#"
           class="inline-flex items-center gap-2 px-8 py-4 glass rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105 font-semibold"
@@ -67,12 +67,10 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useScrollReveal } from '../composables/useAnimations'
 import { portfolioData } from '../utils/data'
 import FlipCard from './ui/FlipCard.vue'
 
 const projectsData = ref(portfolioData.projects)
-const { isVisible, setupObserver } = useScrollReveal()
 const selectedFilter = ref('all')
 
 const filteredProjects = computed(() => {
@@ -85,9 +83,6 @@ const filteredProjects = computed(() => {
 const sectionRef = ref(null)
 
 onMounted(() => {
-  if (sectionRef.value) {
-    setupObserver(sectionRef.value)
-  }
 })
 </script>
 
@@ -96,9 +91,7 @@ onMounted(() => {
   @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.6s ease-out;
-}
+
 
 .line-clamp-2 {
   display: -webkit-box;
@@ -118,14 +111,5 @@ onMounted(() => {
   transform: translateY(10px);
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 </style>

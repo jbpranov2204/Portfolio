@@ -37,7 +37,7 @@
           </div>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-wrap gap-4 animate-fadeInUp justify-center lg:justify-start" style="animation-delay: 0.15s">
+          <div class="flex flex-wrap gap-4  justify-center lg:justify-start">
             <button
               @click="downloadResume"
               class="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 animate-pulseGlow"
@@ -53,7 +53,7 @@
           </div>
 
           <!-- Social Links -->
-          <div class="flex items-center gap-6 pt-4 animate-fadeInUp justify-center lg:justify-start" style="animation-delay: 0.25s">
+          <div class="flex items-center gap-6 pt-4  justify-center lg:justify-start">
             <span class="text-gray-500">Follow me:</span>
             <a
               v-for="social in socialLinks"
@@ -70,11 +70,11 @@
         </div>
 
         <!-- Right Content - Avatar/Image -->
-        <div class="relative h-96 lg:h-auto lg:self-center flex items-center justify-center animate-fadeInUp" style="animation-delay: 0.2s">
+        <div class="relative h-96 lg:h-auto lg:self-center flex items-center justify-center">
           <GithubGlobe :globe-config="globeConfig" :data="sampleArcs" />
 
           <!-- Floating Badge: AI/ML — top-left -->
-          <div class="floating-badge badge-top-left" style="animation-delay: 0s">
+          <div class="floating-badge badge-top-left">
             <div class="badge-icon badge-icon--purple">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                 <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/>
@@ -89,7 +89,7 @@
           </div>
 
           <!-- Floating Badge: AI Agents — bottom-left -->
-          <div class="floating-badge badge-bottom-left" style="animation-delay: 1.5s">
+          <div class="floating-badge badge-bottom-left">
             <div class="badge-icon badge-icon--cyan">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -102,7 +102,7 @@
           </div>
 
           <!-- Floating Badge: Full Stack — bottom-right -->
-          <div class="floating-badge badge-bottom-right" style="animation-delay: 3s">
+          <div class="floating-badge badge-bottom-right">
             <div class="badge-icon badge-icon--blue">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                 <polyline points="16 18 22 12 16 6"/>

@@ -2,7 +2,7 @@
   <section id="about" class="py-20 relative" ref="sectionRef">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="text-center mb-16 animate-slideUp" v-if="isVisible">
+      <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           <span class="gradient-text">About Me</span>
         </h2>
@@ -13,7 +13,7 @@
 
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
-        <div class="space-y-8 animate-slideInLeft" v-if="isVisible">
+        <div class="space-y-8 animate-slideInLeft">
           <div class="glass rounded-2xl p-8 text-center">
             <h3 class="text-xl font-bold mb-4 text-cyan-400">Professional Summary</h3>
             <p class="text-gray-300 leading-relaxed mb-4">
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Right Content - Education Timeline -->
-        <div class="space-y-6 animate-slideInRight" v-if="isVisible">
+        <div class="space-y-6 animate-slideInRight">
           <div class="glass rounded-2xl p-6 border-t-4 border-cyan-400 text-center">
             <h3 class="text-xl font-bold mb-4 text-cyan-400">Education</h3>
             <div
@@ -77,18 +77,13 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useScrollReveal } from '../composables/useAnimations'
 import { portfolioData } from '../utils/data'
 
 const aboutData = ref(portfolioData.about)
-const { isVisible, setupObserver } = useScrollReveal()
 
 const sectionRef = ref(null)
 
 onMounted(() => {
-  if (sectionRef.value) {
-    setupObserver(sectionRef.value)
-  }
 })
 </script>
 
@@ -98,9 +93,7 @@ onMounted(() => {
   @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.6s ease-out;
-}
+
 
 .animate-slideInLeft {
   animation: slideInLeft 0.6s ease-out;
@@ -110,16 +103,7 @@ onMounted(() => {
   animation: slideInRight 0.6s ease-out;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 @keyframes slideInLeft {
   from {

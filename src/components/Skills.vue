@@ -2,7 +2,7 @@
   <section id="skills" ref="sectionRef" class="py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="text-center mb-16 animate-slideUp" v-if="isVisible">
+      <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           <span class="gradient-text">Skills & Technologies</span>
         </h2>
@@ -12,11 +12,11 @@
       </div>
 
       <!-- Detailed Skills Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" v-if="isVisible">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
           v-for="(skills, category, index) in skillsData"
           :key="category"
-          class="glass rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group animate-fadeInUp"
+          class="glass rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group"
           :style="{ animationDelay: `${index * 0.08}s` }"
         >
           <!-- Category Header -->
@@ -52,10 +52,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useScrollReveal } from '../composables/useAnimations'
 import { portfolioData } from '../utils/data'
 const skillsData = ref(portfolioData.skills)
-const { isVisible, setupObserver } = useScrollReveal()
 
 
 
@@ -76,9 +74,6 @@ const getCategoryIcon = (category) => {
 const sectionRef = ref(null)
 
 onMounted(() => {
-  if (sectionRef.value) {
-    setupObserver(sectionRef.value)
-  }
 })
 </script>
 
@@ -87,18 +82,7 @@ onMounted(() => {
   @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.6s ease-out;
-}
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
+
 </style>

@@ -2,7 +2,7 @@
   <section id="contact" ref="sectionRef" class="py-32 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
-      <div class="text-center mb-16 animate-slideUp" v-if="isVisible">
+      <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Let's <span class="gradient-text">Collaborate</span>
         </h2>
@@ -11,7 +11,7 @@
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-16 items-start" v-if="isVisible">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
         
         <!-- Left: Contact Info -->
         <div class="space-y-8 animate-fadeInLeft">
@@ -142,12 +142,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import emailjs from '@emailjs/browser'
-import { useScrollReveal } from '../composables/useAnimations'
 import { portfolioData } from '../utils/data'
 
 const contactData = ref(portfolioData.contact)
 const socialLinks = ref(portfolioData.social)
-const { isVisible, setupObserver } = useScrollReveal()
 const sectionRef = ref(null)
 
 const formSubmitted = ref(false)
@@ -217,9 +215,6 @@ const getIcon = (iconName) => {
 }
 
 onMounted(() => {
-  if (sectionRef.value) {
-    setupObserver(sectionRef.value)
-  }
 })
 </script>
 
@@ -228,9 +223,7 @@ onMounted(() => {
   @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+
 
 .animate-fadeInLeft {
   animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -240,16 +233,7 @@ onMounted(() => {
   animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 @keyframes fadeInLeft {
   from {

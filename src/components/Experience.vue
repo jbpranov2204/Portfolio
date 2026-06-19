@@ -3,18 +3,18 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Section Header -->
-      <div class="text-center mb-20" v-if="isVisible">
-        <p class="text-cyan-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3 animate-fadeInUp">Career</p>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-fadeInUp" style="animation-delay: 0.05s">
+      <div class="text-center mb-20">
+        <p class="text-cyan-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Career</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
           <span class="gradient-text">Professional Experience</span>
         </h2>
-        <p class="text-gray-400 text-lg max-w-xl mx-auto animate-fadeInUp" style="animation-delay: 0.1s">
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">
           Building impactful AI solutions in production environments
         </p>
       </div>
 
       <!-- Timeline -->
-      <div class="relative" v-if="isVisible">
+      <div class="relative">
 
         <!-- Vertical Timeline Rail -->
         <div class="absolute left-6 md:left-10 top-0 bottom-0 w-px timeline-rail"></div>
@@ -24,7 +24,7 @@
           <div
             v-for="(item, index) in experienceItems"
             :key="index"
-            class="relative pl-16 md:pl-24 animate-fadeInUp"
+            class="relative pl-16 md:pl-24"
             :style="{ animationDelay: `${0.15 + index * 0.15}s` }"
           >
             <!-- Timeline Node -->
@@ -118,11 +118,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useScrollReveal } from '../composables/useAnimations'
 import { portfolioData } from '../utils/data'
 import ElectricBorder from './ui/ElectricBorder.vue'
 
-const { isVisible, setupObserver } = useScrollReveal()
 
 // Enhanced experience data with highlights and tech tags
 const experienceItems = ref([
@@ -177,9 +175,6 @@ const getDotClass = (type) => {
 const sectionRef = ref(null)
 
 onMounted(() => {
-  if (sectionRef.value) {
-    setupObserver(sectionRef.value)
-  }
 })
 </script>
 
